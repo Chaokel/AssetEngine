@@ -64,6 +64,7 @@
     <ClInclude Include="IAsset.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AssetTest.cpp" />
     <ClCompile Include="GameAssetFactory.cpp" />
     <ClCompile Include="IAsset.cpp" />
   </ItemGroup>
