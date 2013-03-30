@@ -12,6 +12,9 @@ OpenGLFunctions::OpenGLFunctions(int argc, char** argv)
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("Asset Engine Tester");
 
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	glEnable(GL_DEPTH_TEST);
+
 	glutDisplayFunc(OpenGLFunctions::Display);
 }
 
@@ -27,7 +30,7 @@ void OpenGLFunctions::BeginMainLoop()
 
 void OpenGLFunctions::Display()
 {
-
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glutSwapBuffers();
 }

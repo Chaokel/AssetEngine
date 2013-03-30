@@ -71,12 +71,14 @@
     <ClInclude Include="GameAssetFactory.h" />
     <ClInclude Include="IAsset.h" />
     <ClInclude Include="OpenGLFunctions.h" />
+    <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssetTest.cpp" />
     <ClCompile Include="GameAssetFactory.cpp" />
     <ClCompile Include="IAsset.cpp" />
     <ClCompile Include="OpenGLFunctions.cpp" />
+    <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

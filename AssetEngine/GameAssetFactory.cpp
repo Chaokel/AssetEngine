@@ -1,11 +1,15 @@
 #include "GameAssetFactory.h"
 
-
-GameAssetFactory::GameAssetFactory(void)
+IAsset* GameAssetFactory::Create(std::string type)
 {
-}
+	if(type == "TEXTURE")
+	{
+		return new Texture;
+	}
+	else if(type == "MESH")
+	{
 
+	}
 
-GameAssetFactory::~GameAssetFactory(void)
-{
+	return NULL;
 }

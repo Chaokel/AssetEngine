@@ -1,8 +1,12 @@
 #pragma once
+
+#include <string>
+#include "IAsset.h"
+#include "Texture.h"
+
 class GameAssetFactory
 {
 public:
-	GameAssetFactory(void);
-	~GameAssetFactory(void);
+	IAsset* Create(std::string type);
 };
 
