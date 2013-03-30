@@ -7,6 +7,6 @@
 class GameAssetFactory
 {
 public:
-	IAsset* Create(std::string type);
+	static IAsset* Create(std::string type);
 };
 
