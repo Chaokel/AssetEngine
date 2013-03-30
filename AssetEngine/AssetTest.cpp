@@ -1,7 +1,10 @@
-#include <GL/freeglut.h>
+#include "OpenGLFunctions.h"
+
+
 
 int main(int argc, char** argv)
 {
-	glutInit(argc, &argv);
+	OpenGLFunctions* ogl = new OpenGLFunctions(argc, argv);
 
+	ogl->BeginMainLoop();
 }
