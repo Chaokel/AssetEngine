@@ -1,15 +1,16 @@
 #pragma once
 
 #include <GL/freeglut.h>
+#include <GL/glext.h>
 #include "Texture.h"
 
 class OpenGLFunctions
 {
 public:
-	OpenGLFunctions(int argc, char** argv);
+	OpenGLFunctions();
 	~OpenGLFunctions(void);
 
-	static void DrawTexture(Texture* tex);
+	GLuint LoadTexture(Texture* tex);
 private:
 
 };

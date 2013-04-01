@@ -1,11 +1,10 @@
 #pragma once
 
-#include <fstream>
 #include <string>
 #include <iostream>
+#include <fstream>
+#include <assert.h>
 #include "IAsset.h"
-
-
 
 class Texture:
 	public IAsset
@@ -23,13 +22,16 @@ public:
 	unsigned int GetWidth();
 	unsigned int GetHeight();
 	unsigned int GetImageSize();
-	unsigned char* GetData();
+	char* GetData();
 private:
 	// Data read from the header
 	unsigned int iDataPos;
 	unsigned int iWidth, iHeight;
 	unsigned int iImageSize;
 	// RGB Data
-	unsigned char * cData;
+	char * cData;
+
+	int readInt(std::ifstream& input);
+	short readShort(std::ifstream& input);
 };
 
