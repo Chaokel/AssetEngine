@@ -9,12 +9,8 @@ public:
 	OpenGLFunctions(int argc, char** argv);
 	~OpenGLFunctions(void);
 
-	void BeginMainLoop();
-
 	static void DrawTexture(Texture* tex);
 private:
-	static void Display();
 
-	static Texture* testTexture;
 };
 

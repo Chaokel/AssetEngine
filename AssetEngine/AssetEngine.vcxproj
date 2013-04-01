@@ -70,14 +70,18 @@
   <ItemGroup>
     <ClInclude Include="GameAssetFactory.h" />
     <ClInclude Include="IAsset.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="OpenGLFunctions.h" />
+    <ClInclude Include="Terrain.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssetTest.cpp" />
     <ClCompile Include="GameAssetFactory.cpp" />
     <ClCompile Include="IAsset.cpp" />
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="OpenGLFunctions.cpp" />
+    <ClCompile Include="Terrain.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
