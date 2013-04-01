@@ -1,25 +1,25 @@
-﻿Build started 1/04/2013 1:46:29 AM.
+﻿Build started 1/04/2013 4:37:01 PM.
      1>Project "C:\Users\Timothy\Desktop\AssetEngine\AssetEngine\AssetEngine.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\AssetEngine.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Terrain.cpp
-         Terrain.cpp
-     1>c:\users\timothy\desktop\assetengine\assetengine\terrain.cpp(23): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Texture.cpp
+         Texture.cpp
+     1>c:\users\timothy\desktop\assetengine\assetengine\texture.cpp(33): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
-     1>c:\users\timothy\desktop\assetengine\assetengine\terrain.cpp(77): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\timothy\desktop\assetengine\assetengine\texture.cpp(85): warning C4018: '<' : signed/unsigned mismatch
        Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AssetEngine.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.lib" /MACHINE:X86 Debug\AssetTest.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Timothy\desktop\AssetEngine\Debug\AssetEngine.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AssetEngine.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Timothy\desktop\AssetEngine\Debug\AssetEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Timothy\desktop\AssetEngine\Debug\AssetEngine.lib" /MACHINE:X86 Debug\AssetTest.obj
          Debug\GameAssetFactory.obj
          Debug\IAsset.obj
          Debug\Mesh.obj
          Debug\OpenGLFunctions.obj
          Debug\Terrain.obj
          Debug\Texture.obj
-         LINK : C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.exe not found or not built by the last incremental link; performing full link
-         AssetEngine.vcxproj -> C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.exe
+         LINK : C:\Users\Timothy\desktop\AssetEngine\Debug\AssetEngine.exe not found or not built by the last incremental link; performing full link
+         AssetEngine.vcxproj -> C:\Users\Timothy\desktop\AssetEngine\Debug\AssetEngine.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.exe;#1" /manifest Debug\AssetEngine.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Timothy\desktop\AssetEngine\Debug\AssetEngine.exe;#1" /manifest Debug\AssetEngine.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "Debug\AssetEngine.unsuccessfulbuild".
          Touching "Debug\AssetEngine.lastbuildstate".
@@ -27,4 +27,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.02
+Time Elapsed 00:00:00.84

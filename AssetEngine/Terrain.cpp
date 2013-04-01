@@ -4,78 +4,99 @@
 Terrain::Terrain(void)
 {
 	iWidth = 0;
-	iHeight = 0;
-}
-
-Terrain::Terrain(std::string file)
-{
-	sFilepath = file;
+	iLength = 0;
+	fScale = 255.0f;
+	bNormalsComputed = false;
 }
 
 
 Terrain::~Terrain(void)
 {
+	for(unsigned int i = 0; i < iLength; i++)
+	{
+		delete[] pHeights[i];
+	}
+
+	delete[] pHeights;
+
+	for(unsigned int i = 0; i < iLength; i++)
+	{
+		delete[] vNormals[i];
+	}
+
+	delete[] vNormals;
 }
 
 void Terrain::Load()
 {
-	unsigned char header[64];
-	FILE * file = fopen(sFilepath.c_str(), "rb");
+	std::cout << "Loading Terrain" << std::endl;
+	Texture* heightmap = new Texture();
+	heightmap->SetFile(sFilepath);
+	heightmap->Load();
 
-	if(!file)
+	iWidth = heightmap->GetWidth();
+	iLength = heightmap->GetHeight();
+
+	pHeights = new float*[iLength];
+	for(int i = 0; i < iLength; i++)
 	{
-		// TODO throw error cannot open
-		std::cout << "ERROR1" << std::endl;
+		pHeights[i] = new float[iWidth];
 	}
 
-	if(fread(header, 1, 54, file) != 54)
+	vNormals = new glm::vec3*[iLength];
+	for(int i = 0; i < iLength; i++)
 	{
-		// TODO throw error
-		// not a correct BMP file
-		std::cout << "ERROR2" << std::endl;
+		vNormals[i] = new glm::vec3[iWidth];
 	}
 
-	// BMP files always begin with BM
-	if(header[0] != 'B' || header[1] != 'M')
+	for(int y = 0; y < iLength; y++)
 	{
-		std::cout << "ERROR3" << std::endl;
-		// TODO throw error
-		// not a correct BMP file
+		for(int x = 0; x < iWidth; x++)
+		{
+			unsigned char color = heightmap->GetData()[3 * (y * iWidth + x)];
+			float h = fScale * ((color / 255.0f));
+			SetHeight(x, y, h);
+		}
 	}
 
-	// Make sure this is a 24bpp file
-	if( *(int*)&(header[0x1E]) != 0)
+	delete heightmap;
+	ComputeNormals();
+}
+
+unsigned int Terrain::GetWidth()
+{
+	return iWidth;
+}
+
+unsigned int Terrain::GetLength()
+{
+	return iLength;
+}
+
+float Terrain::GetHeight(int x, int z)
+{
+	return pHeights[z][x];
+}
+
+glm::vec3 Terrain::GetNormal(int x, int z)
+{
+	if(!bNormalsComputed)
 	{
-		std::cout << "ERROR4" << std::endl;
-		// TODO throw error
-		// not a correct BMP file
-	}
-	if( *(int*)&(header[0x1C]) != 24)
-	{
-		std::cout << "ERROR5" << std::endl;
-		// TODO throw error
-		// not a correct BMP file
+		ComputeNormals();
 	}
 
-	iDataPos = *(int*)&(header[0x0A]);
-	iImageSize = *(int*)&(header[0x22]);
-	iWidth = *(int*)&(header[0x12]);
-	iHeight = *(int*)&(header[0x16]);
+	return vNormals[z][x];
+}
 
-	if(iImageSize == 0) 
-		iImageSize = iWidth * iHeight * 3;
-	if(iDataPos == 0)
-		iDataPos = 54;
+void Terrain::SetHeight(int x, int z, float h)
+{
+	std::cout << "x = " << x << " z = " << z << " h = " << h << std::endl;
 
-	cData = new unsigned char[iImageSize];
+	pHeights[z][x] = h;
+	bNormalsComputed = false;
+}
 
-	fread(cData, 1, iImageSize, file);
-	fclose(file);
+void Terrain::ComputeNormals()
+{
 
-	std::cout << "Texture loaded" << std::endl;
-
-	for(int i = 0; i < iImageSize; i++)
-	{
-		
-	}
 }

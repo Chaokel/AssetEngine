@@ -82,7 +82,11 @@ void Texture::Load()
 	fread(cData, 1, iImageSize, file);
 	fclose(file);
 
-	std::cout << "Texture loaded" << std::endl;
+	for(int i = 0; i < iImageSize; i++)
+	{
+		std::cout << cData[i] << std::endl;
+	}
+	
 }
 
 unsigned int Texture::GetDataPos()

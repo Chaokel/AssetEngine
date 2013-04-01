@@ -32,8 +32,9 @@ int main(int argc, char** argv)
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);
 
-	Terrain testTerrain = Terrain("testtexture.bmp");
-	testTerrain.Load();
+	Terrain* testTerrain = new Terrain();
+	testTerrain->SetFile("testtexture.bmp");
+	testTerrain->Load();
 
 	glutDisplayFunc(Display);
 
