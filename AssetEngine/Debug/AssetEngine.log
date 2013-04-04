@@ -1,12 +1,27 @@
+<<<<<<< HEAD
 ﻿Build started 1/04/2013 9:43:41 PM.
+=======
+﻿Build started 3/04/2013 6:04:50 PM.
+>>>>>>> 3b8692d06fa40d8eec473652a1fd14e10b5750a7
      1>Project "C:\Users\Timothy\Desktop\AssetEngine\AssetEngine\AssetEngine.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\AssetEngine.unsuccessfulbuild".
+         Creating "Debug\AssetEngine.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
+<<<<<<< HEAD
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AssetTest.cpp OpenGLFunctions.cpp
          OpenGLFunctions.cpp
          AssetTest.cpp
          Generating Code...
+=======
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt OpenGLFunctions.cpp
+         OpenGLFunctions.cpp
+     1>c:\users\timothy\desktop\assetengine\assetengine\openglfunctions.cpp(56): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\timothy\desktop\assetengine\assetengine\openglfunctions.cpp(59): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\timothy\desktop\assetengine\assetengine\openglfunctions.cpp(62): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\timothy\desktop\assetengine\assetengine\openglfunctions.cpp(62): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\timothy\desktop\assetengine\assetengine\openglfunctions.cpp(65): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\timothy\desktop\assetengine\assetengine\openglfunctions.cpp(65): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+>>>>>>> 3b8692d06fa40d8eec473652a1fd14e10b5750a7
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AssetEngine.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Timothy\Desktop\AssetEngine\Debug\AssetEngine.lib" /MACHINE:X86 Debug\AssetTest.obj
          Debug\GameAssetFactory.obj
@@ -26,4 +41,8 @@
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:04.59
+=======
+Time Elapsed 00:00:01.65
+>>>>>>> 3b8692d06fa40d8eec473652a1fd14e10b5750a7

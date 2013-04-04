@@ -19,6 +19,8 @@ public:
 
 	float GetHeight(int x, int z);
 	glm::vec3 GetNormal(int x, int z);
+
+	void ComputeNormals();
 private:
 	unsigned int iWidth, iLength;
 	float** pHeights;
@@ -28,6 +30,5 @@ private:
 	float fScale;
 
 	void SetHeight(int x, int z, float h);
-	void ComputeNormals();
 };
 
