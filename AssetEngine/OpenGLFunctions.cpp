@@ -21,7 +21,7 @@ GLuint OpenGLFunctions::LoadTexture(Texture* tex)
 		GL_RGB,                       //Format OpenGL uses for image
 		tex->GetWidth(), tex->GetHeight(),  //Width and height
 		0,                            //The border of the image
-		GL_BGR, //GL_RGB, because pixels are stored in RGB format
+		GL_RGB, //GL_RGB, because pixels are stored in RGB format
 		GL_UNSIGNED_BYTE, //GL_UNSIGNED_BYTE, because pixels are stored
 		//as unsigned numbers
 		tex->GetData());               //The actual pixel data
