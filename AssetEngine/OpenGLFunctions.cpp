@@ -55,7 +55,7 @@ void OpenGLFunctions::RenderTerrain(Terrain* ter)
 	glColor3f(0.3f, 0.9f, 0.0f);
 	for(int z = 0; z < ter->GetLength() - 1; z++) {
 		//Makes OpenGL draw a triangle at every three consecutive vertices
-		glBegin(GL_LINE_STRIP);
+		glBegin(GL_TRIANGLE_STRIP);
 		for(int x = 0; x < ter->GetWidth(); x++) {
 			glm::vec3 normal = ter->GetNormal(x, z);
 			glNormal3f(normal[0], normal[1], normal[2]);
@@ -68,7 +68,7 @@ void OpenGLFunctions::RenderTerrain(Terrain* ter)
 	}
 }
 
-void OpenGLFunctions::RenderMesh(Mesh* mesh)
+/*void OpenGLFunctions::RenderMesh(Mesh* mesh)
 {
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
@@ -96,4 +96,4 @@ void OpenGLFunctions::RenderMesh(Mesh* mesh)
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
 	glDisableVertexAttribArray(2);
-}
+}*/

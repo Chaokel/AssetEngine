@@ -14,8 +14,6 @@ public:
 	GLuint LoadTexture(Texture* tex);
 
 	void RenderTerrain(Terrain* ter);
-
-	void RenderMesh(Mesh* mesh);
 private:
 
 };

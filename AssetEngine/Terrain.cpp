@@ -5,7 +5,7 @@ Terrain::Terrain(void)
 {
 	iWidth = 0;
 	iLength = 0;
-	fScale = 20.0f;
+	fScale = 10.0f;
 	bNormalsComputed = false;
 }
 
